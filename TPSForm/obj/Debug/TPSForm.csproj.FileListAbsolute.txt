@@ -1,0 +1,13 @@
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\TPSForm.exe.config
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\TPSForm.exe
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\TPSForm.pdb
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\OxyPlot.dll
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\OxyPlot.xml
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\obj\Debug\TPSForm.csprojAssemblyReference.cache
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\obj\Debug\TPSForm.Properties.Resources.resources
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\obj\Debug\TPSForm.csproj.GenerateResource.cache
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\obj\Debug\TPSForm.csproj.CopyComplete
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\obj\Debug\TPSForm.exe
+C:\Users\ynedb\Documents\Git\TPSForm\TPSForm\obj\Debug\TPSForm.pdb
