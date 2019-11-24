@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TPSForm
 {
-    enum FuelType
-    {
-        Lignite,
-        Anthracite,
-        Coal
-    }
     class Model
     {
-        public const double MassOfFuelPerSecond = 1;
-
         Dictionary<FuelType, double> coefFuel = new Dictionary<FuelType, double>()
         {
             { FuelType.Lignite, 10500.0 * 1000},
@@ -28,9 +16,9 @@ namespace TPSForm
         /// </summary>
         /// <param name="seconds"></param>
         /// <returns>kg</returns>
-        private double GetMassOfFuel(int seconds)
+        private double GetMassOfFuel(double massOfFuelPerSecond, int seconds)
         {
-            return MassOfFuelPerSecond * seconds;
+            return massOfFuelPerSecond * seconds;
         }
 
         /// <summary>
@@ -39,9 +27,9 @@ namespace TPSForm
         /// <param name="specificHeat"></param>
         /// <param name="seconds"></param>
         /// <returns></returns>
-        public double GetEnergyFromFuel(double specificHeat, int seconds)
+        public double GetEnergyFromFuel(double specificHeat, double massOfFuelPerSecond, int seconds)
         {
-            return GetMassOfFuel(seconds) * specificHeat;
+            return GetMassOfFuel(massOfFuelPerSecond, seconds) * specificHeat;
         }
 
         public double GetEnergyFromSteam(double energy, double ccd)
@@ -54,12 +42,11 @@ namespace TPSForm
             return energy * ccd;
         }
 
-        public double GetResultOfModel(FuelType fuel, int deltaTimeSeconds, double ccdTurbin, double ccdSteam)
+        public double GetResultOfModel(FuelType fuel, double massOfFuelPerSecond, int deltaTimeSeconds, double ccdSteam, double ccdTurbin)
         {
-            double coef;
-            coefFuel.TryGetValue(fuel, out coef);
+            var coef = coefFuel[fuel];
 
-            return GetEnergy(GetEnergyFromSteam(GetEnergyFromFuel(coef, deltaTimeSeconds),ccdSteam),ccdTurbin);
+            return GetEnergy(GetEnergyFromSteam(GetEnergyFromFuel(coef, massOfFuelPerSecond, deltaTimeSeconds), ccdSteam), ccdTurbin);
         }
     }
 }
